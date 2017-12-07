@@ -1,0 +1,26 @@
+html,
+body {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  height: 20rem;
+  width: 20rem;
+  border: 1rem solid red;
+  overflow: hidden;
+}
+
+.box-number-list {
+  margin: 0;
+  padding: 0;
+  transition: transform 1s 0s ease-in-out;
+}
+
+.box-number-item {
+  font-size: 10rem;
+  text-align: center;
+  line-height: 20rem;
+  height: 20rem;
+}
