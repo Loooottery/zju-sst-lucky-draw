@@ -1,5 +1,15 @@
 window.onload = function() {
-  setBoxNumber('box-1', 9)
+  var bstart = document.getElementById('button-start')
+
+  bstart.onclick = function() {
+    var count = 0
+
+    setInterval(function() {
+      setBoxNumber('box-1', count)
+      count++
+      count === 10 && (count = 0)
+    }, 800)
+  }
 }
 
 function setBoxNumber(id, n) {

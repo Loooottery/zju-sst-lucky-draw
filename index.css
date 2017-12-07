@@ -15,7 +15,7 @@ body {
 .box-number-list {
   margin: 0;
   padding: 0;
-  transition: transform 1s 0s ease-in-out;
+  transition: transform 0.8s 0s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 .box-number-item {
