@@ -12,15 +12,12 @@ body {
   overflow: hidden;
 }
 
-.box-number-list {
-  margin: 0;
-  padding: 0;
-  transition: transform 0.8s 0s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-}
-
-.box-number-item {
+.box-numbers {
   font-size: 10rem;
+  width: 50%;
   text-align: center;
+  word-break: break-all;
   line-height: 20rem;
-  height: 20rem;
+  transform: translate(50%, 0);
+  transition: transform 4s 0s ease-in-out;
 }
