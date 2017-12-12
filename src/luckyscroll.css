@@ -1,18 +1,11 @@
-html,
-body {
-  font-size: 24px;
-  margin: 0;
-  padding: 0;
-}
-
-.box {
+.lucky-box {
   height: 20rem;
   width: 20rem;
   border: 1rem solid red;
   overflow: hidden;
 }
 
-.box-numbers {
+.lucky-box-numbers {
   font-size: 10rem;
   width: 50%;
   text-align: center;
