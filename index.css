@@ -1,6 +1,6 @@
 html,
 body {
-  font-size: 12px;
+  font-size: 24px;
   margin: 0;
   padding: 0;
 }
@@ -19,5 +19,4 @@ body {
   word-break: break-all;
   line-height: 20rem;
   transform: translate(50%, 0);
-  transition: transform 4s 0s ease-in-out;
 }
