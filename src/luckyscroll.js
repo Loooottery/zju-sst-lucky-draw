@@ -3,9 +3,15 @@
   var _defaultBazier = '0.33, 0.07, 0, 1.01'
   var _defalutDuration = 8
   var _defalutRepeatTimes = 4
+  var _clicked = {}
 
   return (window.luckyscroll = {
     scroll: function(id, contentArray, targetIndex, duration, bazier, repeat) {
+      if (_clicked[id]) {
+        return console.log('box %s has already been clicked', id)
+      } else {
+        _clicked[id] = 1
+      }
       // 设置 box transition
       var box = document.getElementById(id)
       if (!box) {
@@ -19,7 +25,7 @@
         ') 0s'
 
       // 设置 box 文本内容
-      var text = ''
+      var text = box.innerText
       repeat = repeat || _defalutRepeatTimes
       do {
         text += contentArray.join('')

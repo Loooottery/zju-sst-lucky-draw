@@ -1,15 +1,22 @@
+body {
+  font-size: 0;
+}
 .lucky-box {
-  height: 20rem;
-  width: 20rem;
-  border: 1rem solid red;
+  height: 5rem;
+  width: 3.09rem;
+  font-size: 2.5rem;
+  line-height: 5rem;
+  border: 0.1rem solid red;
   overflow: hidden;
+  display: inline-block;
+  user-select: none;
+  font-family: Helvetica;
 }
 
 .lucky-box-numbers {
-  font-size: 10rem;
+  cursor: pointer;
   width: 50%;
   text-align: center;
   word-break: break-all;
-  line-height: 20rem;
   transform: translate(50%, 0);
 }
