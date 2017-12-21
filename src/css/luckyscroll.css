@@ -1,7 +1,9 @@
 .lucky-box-wrapper {
+  position: relative;
   font-size: 0;
-  color: #fff;
+  color: #000a;
   display: inline-block;
+  border: 0.3rem solid rgba(105, 105, 105, 0.2);
 }
 
 .lucky-box {
@@ -9,8 +11,6 @@
   width: 3.09rem;
   font-size: 2.5rem;
   line-height: 5rem;
-  border-top: 0.5rem solid white;
-  border-bottom: 0.5rem solid white;
   overflow: hidden;
   display: inline-block;
   user-select: none;
@@ -23,10 +23,8 @@
   text-align: center;
   word-break: break-all;
   transform: translate(50%, 0);
-  text-shadow: 0 0 1rem #ccc;
 }
 
 .lucky-box-numbers[noscroll] {
-  color: #eee;
   text-shadow: none;
 }

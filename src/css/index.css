@@ -1,12 +1,36 @@
 html,
-body {
+body,
+#boxes::before {
   font-size: 24px;
+  font-weight: bolder;
   margin: 0;
   padding: 0;
   background-color: #c70008;
   text-align: center;
+  background: url('../assets/bg.jpg') no-repeat;
+  background-position: top center;
 }
 
 main {
-  padding-top: 12rem;
+  padding-top: 10rem;
+}
+
+img {
+  width: 10rem;
+}
+
+#boxes {
+  position: relative;
+  padding: 3rem;
+}
+
+#boxes::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0rem;
+  right: 0;
+  left: 0;
+  filter: blur(15px);
+  background-position-y: -10rem;
 }
