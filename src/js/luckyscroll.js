@@ -6,7 +6,7 @@
   var _clicked = {}
 
   return (window.luckyscroll = {
-    scroll: function(id, contentArray, targetIndex, duration, bazier, repeat) {
+    scroll: function(id, contentArray, target, duration, bazier, repeat) {
       if (_clicked[id]) {
         return console.log('box %s has already been clicked', id)
       } else {
@@ -30,7 +30,7 @@
       do {
         text += contentArray.join('')
       } while (repeat--)
-      text += contentArray.slice(0, targetIndex + 1).join('')
+      text += contentArray.slice(0, contentArray.indexOf(target) + 1).join('')
       box.innerHTML = text
 
       // 设置 tranform
