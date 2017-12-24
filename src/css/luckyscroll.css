@@ -2,27 +2,28 @@
   position: relative;
   font-size: 0;
   color: #000a;
-  display: inline-block;
-  border: 0.3rem solid rgba(105, 105, 105, 0.2);
+  /* border: 0.3rem solid rgba(105, 105, 105, 0.2); */
 }
 
 .lucky-box {
   height: 6rem;
   width: 4rem;
-  font-size: 3rem;
+  font-size: 4rem;
   line-height: 6rem;
   overflow: hidden;
   display: inline-block;
   user-select: none;
-  font-family: Helvetica;
+  font-family: Avenir;
+  border-radius: 10px;
+  border: 0.3rem solid;
+  margin: 10px;
+  background-color: #fff;
+  text-align: center;
 }
 
 .lucky-box-numbers {
   cursor: pointer;
-  width: 50%;
-  text-align: center;
   word-break: break-all;
-  transform: translate(50%, 0);
 }
 
 .lucky-box-numbers[noscroll] {

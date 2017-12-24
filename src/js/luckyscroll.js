@@ -2,15 +2,16 @@
   // 默认的贝塞尔曲线
   var _defaultBazier = '0.33, 0.07, 0, 1.01'
   var _defalutDuration = 8
-  var _defalutRepeatTimes = 4
+  var _defalutRepeatTimes = 6
   var _clicked = {}
 
   return (window.luckyscroll = {
     scroll: function(id, contentArray, target, duration, bazier, repeat) {
-      if (_clicked[id]) {
+      let _box = $('#' + id);
+      if (_box.attr('clicked')) {
         return console.log('box %s has already been clicked', id)
       } else {
-        _clicked[id] = 1
+        _box.attr('clicked', 1);
       }
       // 设置 box transition
       var box = document.getElementById(id)
@@ -39,8 +40,7 @@
         -1 *
         (text.length - 1) *
         getComputedStyle(boxWrapper).height.slice(0, -2)
-      var x = getComputedStyle(boxWrapper).width.slice(0, -2) / 4
-      box.style.transform = 'matrix(1,0,0,1,' + x + ',' + y + ')'
+      box.style.transform = 'translate(0, ' + y + 'px)'
     }
   })
 })()

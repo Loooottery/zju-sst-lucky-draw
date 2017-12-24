@@ -2,29 +2,36 @@ html,
 body,
 #boxes::before {
   font-size: 24px;
-  font-weight: bolder;
+  font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #c70008;
+  background-color: rgb(249, 247, 246);
   text-align: center;
-  background: url('../assets/bg.jpg') no-repeat;
-  background-position: top center;
+  /* background: url('../assets/bg.jpg') no-repeat;
+  background-position: top center; */
 }
 
-main {
-  padding-top: 10rem;
-}
-
-img {
+/* img {
   width: 10rem;
-}
+} */
 
-#boxes {
+html, body, main {
   position: relative;
+  width: 100%;
+  height: 100%;
+}
+#boxes {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-tranform: translate(-50%, -50%);
   padding: 3rem;
 }
 
-#boxes::before {
+/* #boxes::before {
   content: '';
   position: absolute;
   top: 0;
@@ -33,4 +40,82 @@ img {
   left: 0;
   filter: blur(15px);
   background-position-y: -10rem;
+} */
+
+.input {
+  position: relative;
+  display: inline-block;
+	margin: 1em;
+  height: 50px;
+	max-width: 400px;
+	width: calc(100% - 2em);
+}
+
+.input__field {
+  position: relative;
+  display: block;
+  line-height: 50px;
+  padding: 0 0.5rem;
+	border: none;
+	border-radius: 10px;
+  font-size: 1em;
+	-webkit-appearance: none; /* for box shadows to show on iOS */
+}
+
+.input__field:focus {
+	outline: none;
+}
+
+/* Minoru */
+.input__field--minoru {
+	width: 100%;
+	background: #fff;
+	/* box-shadow: 0px 0px 0px 2px transparent; */
+	color: #eca29b;
+	/* -webkit-transition: box-shadow 0.3s;
+	transition: box-shadow 0.3s; */
+}
+
+.input__field--minoru:focus {
+	box-shadow: 0px 0px 0px 2px #eca29b;
+  /* -webkit-animation: anim-shadow 0.3s forwards;
+	animation: anim-shadow 0.3s forwards; */
+}
+
+@-webkit-keyframes anim-shadow {
+	to {
+		box-shadow: 0px 0px 100px 50px;
+    opacity: 0;
+	}
+}
+
+@keyframes anim-shadow {
+	to {
+		box-shadow: 0px 0px 100px 50px;
+    opacity: 0;
+	}
+}
+
+.input--filled .input__field--minorus {
+  opacity: 1;
+}
+
+#undo {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  color: #000a;
+  left: -15%;
+  line-height: 50px;
+  font-size: 1.5rem;
+}
+
+#loading {
+  display: none;
+}
+
+.info-content {
+  margin: 2rem;
+  font-size: 2.5rem;
+  color: #000a;
 }
