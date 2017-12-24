@@ -81,7 +81,13 @@ function ID(id) {
   this.digit_8 = id.toString().charAt(7);
 }
 
-function randNum(candidateObj, digit) {
+/**
+ * 生成随机数
+ * @param  {[type]} candidateObj 候选对象
+ * @param  {[type]} digit        针对哪一位
+ * @return {[type]}              该位最后随机的结果
+ */
+function randNum(seed, candidateObj, digit) {
   var randomConfig = candidateObj['digit_' + digit + '_cnt'];
   var randomList = [];
   for (var i in randomConfig) {
@@ -90,7 +96,9 @@ function randNum(candidateObj, digit) {
     }
   }
   console.log(randomList);
-  let randomIndex = Math.floor(Math.random() * randomList.length)
+  //调用seedrandom.js
+  var myrng = new Math.seedrandom(seed);
+  let randomIndex = Math.floor(myrng() * randomList.length)
   console.log("randomIndex:" + randomIndex);
 
   var randomValue = randomList[randomIndex];

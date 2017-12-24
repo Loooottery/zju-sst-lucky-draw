@@ -49,8 +49,12 @@ window.onload = function() {
       if(digit_cnt[num] > 0) range.push(num);
     }
 
+    //设置随机数种子
+    let seed = $('#randomSeed').val();
+    console.log(seed);
+
     //设置result
-    let result_now = randNum(candidateObj, boxId); //!!!!!!!由随机函数得到抽取结果(字符)
+    let result_now = randNum(seed, candidateObj, boxId); //!!!!!!!由随机函数得到抽取结果(字符)
     result[id] = result_now;
 
     //滚动效果并显示结果
@@ -77,7 +81,6 @@ window.onload = function() {
       $('#info').text(candidateObj.IDs.length);
       $('#info').css('display', 'inline');
       $('#loading').css('display', 'none');
-      console.log("动画结束");
     }, 8000);
 
     //推入memory栈

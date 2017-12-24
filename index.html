@@ -19,7 +19,7 @@
     <article id="boxes">
       <div class="input">
         <i class="fa fa-undo" id="undo"></i>
-        <input class="input__field input__field--minoru" type="text" id="randomSeed">
+        <input class="input__field input__field--minoru" type="text" id="randomSeed" placeholder="设置随机数种子">
       </div>
       <section class="lucky-box-wrapper">
         <div class="lucky-box">
@@ -77,18 +77,13 @@
   <footer role="contentinfo">
   </footer>
 
+  <script type="text/javascript" src="src/js/seedrandom.js"></script>
   <script type="text/javascript" src="src/js/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="src/js/include.js"></script>
   <script type="text/javascript" src="src/js/IDlist.js"></script>
   <script src="src/js/luckyscroll.js"></script>
   <script src="src/js/index.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $("#randomSeed").click(function(){
-        $(".input--minoru").addClass("input--filled");
-      });
-    });
-  </script>
+
 </body>
 
 </html>
