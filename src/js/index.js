@@ -56,6 +56,7 @@ window.onload = function() {
     //设置result
     let result_now = randNum(seed, candidateObj, boxId); //!!!!!!!由随机函数得到抽取结果(字符)
     result[id] = result_now;
+    console.log(result_now);
 
     //滚动效果并显示结果
     luckyscroll.scroll(id, range, result_now)
@@ -86,13 +87,13 @@ window.onload = function() {
     //推入memory栈
     memoryStack.push(new Memory(id, result));
     console.log(candidateObj);
-    console.log(memoryStack.length);
   });
 
   //撤销上一次抽取
   document.getElementById('undo').addEventListener('click', function(event) {
     let oldstate = memoryStack.pop();
     let newstate = memoryStack[memoryStack.length - 1];
+    if(!newstate) return;
     console.log(newstate);
 
     //重置数字显示
