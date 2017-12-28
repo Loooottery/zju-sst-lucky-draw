@@ -17,6 +17,8 @@ window.onload = function() {
     }
   });
   console.log(candidateObj);
+  //显示人数
+  $('#info').text(candidateObj.IDs.length);
 
   //抽取结果
   var result = {//初始化为'X'

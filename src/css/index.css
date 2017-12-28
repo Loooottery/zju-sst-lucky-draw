@@ -8,8 +8,8 @@ body,
   padding: 0;
   background-color: rgb(249, 247, 246);
   text-align: center;
-  /* background: url('../assets/bg.jpg') no-repeat;
-  background-position: top center; */
+  background: url('../assets/bg.png') no-repeat;
+  background-size: cover;
 }
 
 /* img {
@@ -71,13 +71,13 @@ html, body, main {
 	width: 100%;
 	background: #fff;
 	/* box-shadow: 0px 0px 0px 2px transparent; */
-	color: #eca29b;
+	color: #CF4140;
 	/* -webkit-transition: box-shadow 0.3s;
 	transition: box-shadow 0.3s; */
 }
 
 .input__field--minoru:focus {
-	box-shadow: 0px 0px 0px 2px #eca29b;
+	box-shadow: 0px 0px 0px 2px #CF4140;
   /* -webkit-animation: anim-shadow 0.3s forwards;
 	animation: anim-shadow 0.3s forwards; */
 }
